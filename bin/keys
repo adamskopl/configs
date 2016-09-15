@@ -1,0 +1,4 @@
+#!/bin/bash
+
+setxkbmap pl
+setxkbmap -option ctrl:swapcaps

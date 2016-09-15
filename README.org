@@ -1,0 +1,64 @@
+My Ubuntu+i3wm reinstall checklist
+
+* terminal
+
+  + terminator
+    - use config from git
+    - set Source Code Pro Regular 10
+  + zsh
+    - install zsh (synaptic)
+    - chsh -s `which zsh`
+      - or add in .bashrc
+        - zsh
+    - https://ohmyz.sh/
+    - check .zshrc and modify it if needed (there are nice comments)
+    - add bin and other paths ONLY TO .profile
+      - if not, dmenu_run will not work (probably because .bashrc and .zshrc are
+        only for interactive shells)
+  + make bin directory
+    - all symlinks to apps that are not in git/configs/bin
+    - make sure needed command from bin are working with i3 launcher
+      - not sure how to make it. adding to .bashrc will do the job in the end.
+  + ssh
+    - generate key
+      https://help.github.com/en/articles/connecting-to-github-with-ssh
+
+* themes
+** adwaita
+
+   - Emacs 'adwaita' theme
+   - hsetroot, i3lock background: "#ededed"
+   - terminator 'adwaita' profile from config (for permanent profile choice
+     Preferences -> Layouts -> Terminal child1)
+   - i3-style 'okraits' or 'base16-tomorrow'
+
+** heroku
+
+   - Emacs 'heroku' theme
+   - hsetroot, i3lock background: "#3f464c"
+   - terminator 'heroku' profile from config (for permanent profile choice
+     Preferences -> Layouts -> Terminal child1)
+   - i3-style 'base16-tomorrow'
+
+     #+BEGIN_SRC bash
+i3-style.x86_64 base16-tomorrow  -o ~/.config/i3/config --reload
+     #+END_SRC
+
+     #+BEGIN_SRC conf
+bar {
+  colors {
+    separator #969896
+    background #1d1f21
+    statusline #c5c8c6
+    focused_workspace #81a2be #81a2be #1d1f21 #282828
+    active_workspace #373b41 #373b41 #ffffff #928374
+    inactive_workspace #282a2e #282a2e #969896 #928374
+    urgent_workspace #cc6666 #cc6666 #ffffff #ebdbb2
+  }
+}
+
+client.focused #81a2be #81a2be #1d1f21 #282a2e
+client.focused_inactive #373b41 #373b41 #969896 #282a2e
+client.unfocused #282a2e #282a2e #969896 #282a2e
+client.urgent #373b41 #cc6666 #ffffff #cc6666
+     #+END_SRC
