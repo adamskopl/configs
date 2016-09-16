@@ -1,3 +1,10 @@
+;; ------------ js2-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; ------------ js2-mode hooks
+(eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'hl-line-mode))
+(eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'linum-mode))
+
 ;; ------------ web-beautify
 (require 'web-beautify) ;; Not necessary if using ELPA package
 (eval-after-load 'js2-mode
@@ -48,10 +55,6 @@
   '(add-hook 'css-mode-hook
 	     (lambda ()
 	       (add-hook 'before-save-hook 'web-beautify-css-buffer t t))))
-
-;; ------------ js2-mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
 
 ;; ------------ js2-refactor https://github.com/magnars/js2-refactor.el
 (require 'js2-refactor)
