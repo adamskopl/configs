@@ -1,6 +1,5 @@
 ;; ------------ js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
 ;; ------------ js2-mode hooks
 (eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'hl-line-mode))
 (eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'linum-mode))
