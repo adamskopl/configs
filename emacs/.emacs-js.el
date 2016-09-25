@@ -4,6 +4,9 @@
 (eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'hl-line-mode))
 (eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'linum-mode))
 
+;; ------------ js2-highlight-vars-mode
+(eval-after-load 'js2-mode '(add-hook 'js2-mode-hook 'js2-highlight-vars-mode))
+
 ;; ------------ web-beautify
 (require 'web-beautify) ;; Not necessary if using ELPA package
 (eval-after-load 'js2-mode
