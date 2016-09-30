@@ -101,3 +101,19 @@
 
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
+
+;; ------------ projectile
+;; invoke in project's root directory: (projectile-global-mode)
+;;(projectile-mode)
+(projectile-global-mode)
+
+;; ------------ helm https://github.com/emacs-helm/helm
+(require 'helm-config)
+(helm-mode 1)
+
+;; (setq helm-projectile-fuzzy-match nil)
+(require 'helm-projectile)
+(helm-projectile-on)
+
+;; ------------ project-explorer
+(project-explorer-open)

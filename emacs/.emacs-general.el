@@ -29,3 +29,6 @@
 
 ;; ------------ https://github.com/zk-phi/symon/
 (symon-mode)
+
+(require 'powerline)
+(powerline-default-theme)
