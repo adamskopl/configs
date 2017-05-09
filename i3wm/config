@@ -9,4 +9,15 @@ exec setxkbmap -option ctrl:swapcaps
 exec compton &
 
 exec_always nm-applet
+
 exec_always feh --bg-scale $wallpaper_file
+
+# not working:
+workspace 1 output VGA1
+workspace 2 output VGA1
+workspace 3 output VGA1
+workspace 4 output VGA1
+workspace 5 output HDMI2
+workspace 6 output HDMI2
+workspace 7 output HDMI2
+workspace 8 output HDMI2
