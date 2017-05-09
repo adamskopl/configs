@@ -1,0 +1,12 @@
+# append to the end of the original config
+
+set $wallpaper_file ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.jpg
+
+bindsym Control+Mod1+l exec i3lock
+
+exec xrandr --auto --output HDMI2 --mode 1920x1080 --right-of VGA1
+exec setxkbmap -option ctrl:swapcaps
+exec compton &
+
+exec_always nm-applet
+exec_always feh --bg-scale $wallpaper_file
