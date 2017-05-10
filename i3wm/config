@@ -2,7 +2,7 @@
 
 set $screen_left VGA1
 set $screen_right HDMI2
-set $wallpaper_file ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.jpg
+set $wallpaper_file ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.png
 
 exec xrandr --auto --output $screen_right --mode 1920x1080 --right-of $screen_left
 exec setxkbmap -option ctrl:swapcaps
