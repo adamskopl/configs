@@ -1,32 +1,34 @@
 # append to the end of the original config
 
-# CONFIG COMMON
+# --- CONFIG COMMON
 set $DISPLAY_RESOLUTION 1920x1080
-# CONFIG THINKPAD
+# --- CONFIG THINKPAD
 set $DISPLAY_LEFT HDMI3
 set $DISPLAY_RIGHT VGA1
 set $DISPLAY_LAPTOP LVDS1
 set $WALLPAPER_FILE ~/Pictures/wallpapers/games/hotlineMiami.png
-# CONFIG SECOND
-#set $DISPLAY_LEFT VGA1
-#set $DISPLAY_RIGHT HDMI2
+# --- CONFIG SECOND
+#set $DISPLAY_LEFT HDMI2
+#set $DISPLAY_RIGHT VGA1
 #set $WALLPAPER_FILE ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.png
 
-# EXEC COMMON
+# --- EXEC COMMON
 exec setxkbmap -option ctrl:swapcaps
+exec setxkbmap pl
 exec compton &
 exec nm-applet
+exec alarmclock
 exec_always feh --bg-scale $WALLPAPER_FILE
-# EXEC THINKPAD
+# --- EXEC THINKPAD
 exec xrandr --output $DISPLAY_LAPTOP --off --output $DISPLAY_LEFT --right-of $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION --output $DISPLAY_RIGHT --primary --mode $DISPLAY_RESOLUTION
 exec rescuetime
-# EXEC SECOND
-#exec xrandr --auto --output $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION --right-of $DISPLAY_LEFT
+# --- EXEC SECOND
+#exec xrandr --auto --output $DISPLAY_LEFT --mode $DISPLAY_RESOLUTION --right-of $DISPLAY_RIGHT
 
-# BINDSYM COMMON
+# --- BINDSYM COMMON
 bindsym Control+$mod+l exec i3lock -i $WALLPAPER_FILE
 
-# WORKSPACES THINKPAD
+# --- WORKSPACES COMMON
 workspace 1 output $DISPLAY_RIGHT
 workspace 2 output $DISPLAY_RIGHT
 workspace 3 output $DISPLAY_RIGHT
@@ -35,4 +37,3 @@ workspace 7 output $DISPLAY_LEFT
 workspace 8 output $DISPLAY_LEFT
 workspace 9 output $DISPLAY_LEFT
 workspace 10 output $DISPLAY_LEFT
-# WORKSPACES SECOND
