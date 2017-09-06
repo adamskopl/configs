@@ -21,7 +21,6 @@ exec alarmclock
 exec_always feh --bg-scale $WALLPAPER_FILE
 # --- EXEC THINKPAD
 exec xrandr --output $DISPLAY_LAPTOP --off --output $DISPLAY_LEFT --primary --right-of $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION --output $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION
-exec rescuetime
 # --- EXEC SECOND
 #exec xrandr --auto --output $DISPLAY_LEFT --mode $DISPLAY_RESOLUTION --right-of $DISPLAY_RIGHT
 
