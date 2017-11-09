@@ -1,3 +1,60 @@
+(defun dotspacemacs/layers ()
+  "Configuration Layers declaration.
+You should not put any user code in this function besides modifying the variable
+values."
+  (setq-default
+   dotspacemacs-configuration-layers
+   '(
+     html
+     javascript
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
+     ;; <M-m f e R> (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
+     helm
+     auto-completion
+     better-defaults
+     emacs-lisp
+     git
+     markdown
+     org
+     ;; (shell :variables
+     ;;        shell-default-height 30
+     ;;        shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
+     version-control
+     selectric
+     themes-megapack
+     )
+   )
+  )
+
+(defun dotspacemacs/init ()
+  "Initialization function.
+This function is called at the very startup of Spacemacs initialization
+before layers configuration.
+You should not put any user code in there besides modifying the variable
+values."
+  (setq-default
+   dotspacemacs-themes '(
+                         monokai
+                         afternoon
+                         ample-flat
+                         birds-of-paradise-plus
+                         badwolf
+                         darktooth
+                         jazz
+                         seti
+                         spacegray
+                         zen-and-art
+                         wombat
+                         spacemacs-dark
+                         spacemacs-light)
+   )
+  )
+
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
