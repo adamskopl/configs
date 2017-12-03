@@ -41,9 +41,14 @@ values."
    dotspacemacs-themes '(
                          monokai
                          afternoon
-                         ample-flat
+                         dichromacy
+                         gruvbox
+                         misterioso
+                         ample
                          birds-of-paradise-plus
                          badwolf
+                         tangotango
+                         naquadah
                          darktooth
                          jazz
                          seti
