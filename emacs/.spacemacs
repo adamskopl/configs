@@ -25,7 +25,6 @@ values."
      spell-checking
      syntax-checking
      version-control
-     selectric
      themes-megapack
      )
    )
@@ -40,23 +39,33 @@ values."
   (setq-default
    dotspacemacs-themes '(
                          monokai
-                         afternoon
-                         dichromacy
-                         gruvbox
-                         misterioso
-                         ample
-                         birds-of-paradise-plus
-                         badwolf
-                         tangotango
+                         molokai
                          naquadah
-                         darktooth
-                         jazz
+                         purple-haze
                          seti
-                         spacegray
-                         zen-and-art
+                         toxi
+                         twilight-anti-bright
+                         underwater
+                         adwaita
+                         alect-black-alt
+                         cherry-blossom
+                         cyberpunk
+                         dakrone
+                         soothe
+                         spolsky
+                         subatomic
+                         tango-dark
+                         tangotango
+                         graham
+                         material
+                         gruvbox
                          wombat
+                         inkpot
+                         flatland
+                         fogus
+                         gotham
+                         spacegray
                          spacemacs-dark
-                         spacemacs-light)
    )
   )
 
@@ -78,7 +87,6 @@ you should place your code here."
       (when (and eslint (file-executable-p eslint))
         (setq-local flycheck-javascript-eslint-executable eslint))))
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  (selectric-mode)
   )
 
 (custom-set-variables
