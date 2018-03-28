@@ -38,34 +38,16 @@ You should not put any user code in there besides modifying the variable
 values."
   (setq-default
    dotspacemacs-themes '(
-                         monokai
-                         molokai
-                         naquadah
-                         purple-haze
-                         seti
-                         toxi
-                         twilight-anti-bright
-                         underwater
-                         adwaita
-                         alect-black-alt
-                         cherry-blossom
-                         cyberpunk
-                         dakrone
-                         soothe
-                         spolsky
-                         subatomic
-                         tango-dark
-                         tangotango
-                         graham
-                         material
-                         gruvbox
-                         wombat
-                         inkpot
-                         flatland
-                         fogus
                          gotham
-                         spacegray
-                         spacemacs-dark
+                         underwater
+                         afternoon
+                         ample
+                         badwolf
+                         monokai
+                         django
+                         molokai
+                         spolsky
+                         wombat
    )
   )
 
@@ -77,6 +59,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/toggle-transparency)
+  (spacemacs/decrease-transparency)
   (add-to-list 'auto-mode-alist '("\\.styl\\'" . less-css-mode))
   (defun my/use-eslint-from-node-modules ()
     (let* ((root (locate-dominating-file
@@ -100,5 +83,6 @@ you should place your code here."
  '(browse-url-browser-function (quote browse-url-chromium))
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
+ '(js2-basic-offset 2)
  '(standard-indent 2)
- )
+  )
