@@ -14,21 +14,23 @@ set $WALLPAPER_FILE ~/Pictures/wallpapers/games/hotlineMiami.png
 #set $WALLPAPER_FILE ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.png
 
 # --- EXEC COMMON
-exec setxkbmap -option ctrl:swapcaps
-exec setxkbmap pl
+exec_always setxkbmap -option ctrl:swapcaps
+exec_always setxkbmap pl
 exec compton &
 exec nm-applet
-exec alarmclock
 exec_always feh --bg-scale $WALLPAPER_FILE
+exec ~/exec-terminator.sh # update-manager -d
 # --- EXEC THINKPAD
 exec xrandr --output $DISPLAY_LAPTOP --off --output $DISPLAY_LEFT --primary --right-of $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION --output $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION
+exec alarm-clock-applet
 # --- EXEC SECOND
 #exec xrandr --auto --output $DISPLAY_LEFT --mode $DISPLAY_RESOLUTION --right-of $DISPLAY_RIGHT
+#exec alarmclock
 
 # --- BINDSYM COMMON
 bindsym Control+$mod+l exec i3lock -i $WALLPAPER_FILE
 bindsym $mod+plus exec amixer sset Master 5%+
-bindsym $mod+minus exec amixer sset Master 5%+
+bindsym $mod+minus exec amixer sset Master 5%-
 
 # --- WORKSPACES COMMON
 workspace 1 output $DISPLAY_RIGHT
