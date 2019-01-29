@@ -71,8 +71,11 @@ you should place your code here."
       (when (and eslint (file-executable-p eslint))
         (setq-local flycheck-javascript-eslint-executable eslint))))
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+  ;; JS2 HOOKS
   (add-hook 'js2-mode-hook' spacemacs/toggle-line-numbers-on)
   (add-hook 'js2-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
+  ;; ORG MODE HOOKS
+  (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
   )
 
 (custom-set-variables
