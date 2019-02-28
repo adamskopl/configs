@@ -76,6 +76,7 @@ you should place your code here."
   (add-hook 'js2-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
   ;; ORG MODE HOOKS
   (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
+  (add-hook 'org-mode-hook' spacemacs/toggle-auto-fill-mode-on)
   )
 
 (custom-set-variables
