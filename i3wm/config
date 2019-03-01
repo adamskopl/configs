@@ -1,43 +1,41 @@
 # append to the end of the original config
 
-# --- CONFIG COMMON
-set $DISPLAY_RESOLUTION 1920x1080
 set $RESOLUTION_LEFT 1920x1080
 set $RESOLUTION_RIGHT 1280x800
-#focus_follows_mouse no
-# --- CONFIG THINKPAD
+# focus_follows_mouse no
+
 set $DISPLAY_LEFT HDMI-3
 set $DISPLAY_RIGHT LVDS-1
-set $WALLPAPER_FILE ~/Pictures/wallpapers/hotline.png
-# --- CONFIG SECOND
-#set $DISPLAY_LEFT HDMI2
-#set $DISPLAY_RIGHT VGA1
-#set $WALLPAPER_FILE ~/Pictures/games/green_fantasy_art_cyberpunk_artwork_fan_1920x1080_71932.png
+set $WALLPAPER_FILE ~/Pictures/wallpapers/city3.png
 
-# --- EXEC COMMON
-exec_always setxkbmap -option ctrl:swapcaps
-exec_always setxkbmap pl
-# exec compton &
 exec nm-applet
-exec_always feh --bg-scale $WALLPAPER_FILE # --bg-center --bg-fill --bg-max --bg-scale --bg-tile
-exec ~/exec-terminator.sh # update-manager -d
-# --- EXEC THINKPAD
-# OLD (2 monitors, laptop)
-# exec xrandr --output $DISPLAY_LAPTOP --off --output $DISPLAY_LEFT --primary --right-of $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION --output $DISPLAY_RIGHT --mode $DISPLAY_RESOLUTION
-# MONITOR + LAPTOP
+exec_always feh --bg-fill $WALLPAPER_FILE # --bg-center --bg-fill --bg-max --bg-scale --bg-tile
+exec ~/exec-terminator.sh # update-manager -d, other
+
 exec xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RESOLUTION_LEFT --output $DISPLAY_RIGHT --mode $RESOLUTION_RIGHT
+
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
 exec alarm-clock-applet
-# --- EXEC SECOND
-#exec xrandr --auto --output $DISPLAY_LEFT --mode $DISPLAY_RESOLUTION --right-of $DISPLAY_RIGHT
-#exec alarmclock
 
-# --- BINDSYM COMMON
-bindsym Control+$mod+l exec i3lock -i $WALLPAPER_FILE
+# --- BINDSYM
+bindsym Control+$mod+l exec i3lock -t -i $WALLPAPER_FILE
+bindsym $mod+q sticky toggle
 bindsym $mod+plus exec amixer sset Master 5%+
 bindsym $mod+minus exec amixer sset Master 5%-
 
-# --- WORKSPACES COMMON
+bindsym $mod+F1 exec amixer -D pulse set Master 1+ toggle
+bindsym $mod+F2 exec amixer sset Master 5%-
+bindsym $mod+F3 exec amixer sset Master 5%+
+
+bindsym $mod+backslash exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+bracketleft exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+bracketright exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
+bindsym $mod+F5 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+F6 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym $mod+F7 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+F8 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
 workspace 1 output $DISPLAY_LEFT
 workspace 2 output $DISPLAY_LEFT
 workspace 3 output $DISPLAY_LEFT
@@ -49,3 +47,6 @@ workspace 7 output $DISPLAY_RIGHT
 workspace 8 output $DISPLAY_RIGHT
 workspace 9 output $DISPLAY_RIGHT
 workspace 10 output $DISPLAY_RIGHT
+
+exec_always setxkbmap -option ctrl:swapcaps
+exec_always setxkbmap pl
