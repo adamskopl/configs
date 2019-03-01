@@ -26,6 +26,7 @@ values."
      syntax-checking
      version-control
      themes-megapack
+     colors
      )
    )
   )
@@ -38,18 +39,21 @@ You should not put any user code in there besides modifying the variable
 values."
   (setq-default
    dotspacemacs-themes '(
-                         gotham
-                         underwater
+                         monokai
                          afternoon
                          ample
+                         naquadah
+                         underwater
+                         deeper-blue
+                         subatomic
+                         subatomic256
+                         tangotango
                          badwolf
-                         monokai
-                         django
-                         molokai
-                         spolsky
                          wombat
-   )
-  )
+                         spolsky
+                         django
+                         )
+   ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -71,22 +75,33 @@ you should place your code here."
       (when (and eslint (file-executable-p eslint))
         (setq-local flycheck-javascript-eslint-executable eslint))))
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  ;; JS2 HOOKS
+  ;; JS2
   (add-hook 'js2-mode-hook' spacemacs/toggle-line-numbers-on)
   (add-hook 'js2-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
-  ;; ORG MODE HOOKS
+  ;; ORG MODE
   (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
   (add-hook 'org-mode-hook' spacemacs/toggle-auto-fill-mode-on)
+  (global-set-key (kbd "<f5>") 'revert-buffer)
   )
 
+;; Do not write anything past this comment. This is where Emacs will
+;; auto-generate custom variable definitions.
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(browse-url-browser-function (quote browse-url-chromium))
+ '(browse-url-browser-function (quote browse-url-firefox))
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
- '(standard-indent 2)
-  )
+ '(org-agenda-files
+   (quote
+    ("~/main.org" "~/hobby.org" )))
+ '(org-use-tag-inheritance nil)
+ '(standard-indent 2))
+
+(custom-set-faces
+ ;; so the themes' backgrounds work
+ '(default ((((class color) (min-colors 257)) nil) (((class color) (min-colors 89)) (:background "#1c1c1c" :foreground "#eeeeee"))))
+ )
