@@ -1,0 +1,40 @@
+- install:
+  - firefox (newest version)
+  - compton
+  - alarm-clock-applet
+- git
+  - configure
+- i3
+  - from synaptic
+    - i3lock
+  - use config from git
+  - install compton
+  - install terminator
+    - use config from git
+- emacs
+  - download newest version
+  - install needed libs with synaptic
+  - ./configure
+  - make
+  - install spacemacs
+    + install Adobe Source Code Pro font
+      - https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font
+        - wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+        - mkdir ~/.fonts
+        - cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+    + modify ~/.spacemacs
+      - use config from git
+- zsh
+  - install zsh (synaptic)
+  - chsh -s `which zsh`
+    - or add in .bashrc
+      - zsh
+  - from now on don't use .basrc, use .zshrc
+  - check .zshrc and modify it (there are nice comments)
+  - add bin path from git/configs to $PATH
+- make bin directory
+  - all symlinks to apps that are not in git/configs/bin
+  - make sure needed command from bin are working with i3 launcher
+    - not sure how to make it. adding to .bashrc will do the job in the end.
+- ssh
+  - generate key https://help.github.com/en/articles/connecting-to-github-with-ssh
