@@ -29,9 +29,10 @@
   - chsh -s `which zsh`
     - or add in .bashrc
       - zsh
-  - from now on don't use .basrc, use .zshrc
-  - check .zshrc and modify it (there are nice comments)
-  - add bin path from git/configs to $PATH
+  - check .zshrc and modify it if needed (there are nice comments)
+  - add bin and other paths ONLY TO .profile
+    - if not, dmenu_run will not work (probably because .bashrc and .zshrc are
+      only for interactive shells)
 - make bin directory
   - all symlinks to apps that are not in git/configs/bin
   - make sure needed command from bin are working with i3 launcher
