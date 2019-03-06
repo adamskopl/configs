@@ -9,3 +9,4 @@
   show-word = show --word-diff=color
 [core]
 	editor = emacs -nw -q
+	excludesfile = ~/.gitignore_global
