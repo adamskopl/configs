@@ -172,7 +172,7 @@ exec startup-software # update-manager -d, other
 
 exec xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RESOLUTION_LEFT --output $DISPLAY_RIGHT --mode $RESOLUTION_RIGHT
 
-exec --no-startup-id compton --config ~/.config/i3/compton.conf
+exec --no-startup-id compton
 exec alarm-clock-applet
 
 # --- BINDSYM
