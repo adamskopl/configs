@@ -62,9 +62,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; SYSTEM
+  ;; if some system paths are not working
+  ;; (setenv "PATH" (concat (getenv "PATH") ":PATH1:PATH2"))
+
+  ;; LOOK
   (spacemacs/toggle-transparency)
   (spacemacs/decrease-transparency)
-  (add-to-list 'auto-mode-alist '("\\.styl\\'" . less-css-mode))
+
+  ;; WEBDEV
   (defun my/use-eslint-from-node-modules ()
     (let* ((root (locate-dominating-file
                   (or (buffer-file-name) default-directory)
@@ -75,12 +82,15 @@ you should place your code here."
       (when (and eslint (file-executable-p eslint))
         (setq-local flycheck-javascript-eslint-executable eslint))))
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  ;; JS2
   (add-hook 'js2-mode-hook' spacemacs/toggle-line-numbers-on)
   (add-hook 'js2-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
+  (add-to-list 'auto-mode-alist '("\\.styl\\'" . less-css-mode))
+
   ;; ORG MODE
   (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
   (add-hook 'org-mode-hook' spacemacs/toggle-auto-fill-mode-on)
+
+  ;; KEYS
   (global-set-key (kbd "<f5>") 'revert-buffer)
   )
 
