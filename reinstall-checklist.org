@@ -1,5 +1,8 @@
 - install:
   - firefox (newest version)
+    - Security: STRICT
+    - DuckDuckGo Privacy Essential
+    - Cookie Auto Delete
   - compton
   - alarm-clock-applet
   - https://justgetflux.com/
