@@ -3,6 +3,7 @@
     - Security: STRICT
     - DuckDuckGo Privacy Essential
     - Cookie Auto Delete
+      - TURN ON AUTO DELETE
   - compton
   - alarm-clock-applet
   - https://justgetflux.com/
