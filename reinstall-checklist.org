@@ -41,6 +41,7 @@
     - chsh -s `which zsh`
       - or add in .bashrc
         - zsh
+    - https://ohmyz.sh/
     - check .zshrc and modify it if needed (there are nice comments)
     - add bin and other paths ONLY TO .profile
       - if not, dmenu_run will not work (probably because .bashrc and .zshrc are
