@@ -34,6 +34,7 @@
       - use config from git
 - terminal
   - terminator
+    - use config from git
     - set Source Code Pro Regular 10
   - zsh
     - install zsh (synaptic)
