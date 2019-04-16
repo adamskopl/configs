@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:DejaVu Sans Mono 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -159,14 +159,16 @@ bar {
 # append to the end of the original config
 
 set $RESOLUTION_LEFT 1920x1080
-set $RESOLUTION_RIGHT 1280x800
+set $RESOLUTION_RIGHT 1366x768
 # focus_follows_mouse no
 
 set $DISPLAY_LEFT HDMI-3
 set $DISPLAY_RIGHT LVDS-1
-set $WALLPAPER_FILE ~/Pictures/wallpapers/city3.png
+set $WALLPAPER_FILE ~/Pictures/wallpapers/hotline.png
 
-exec nm-applet
+# battery monitoring. not tested
+exec --no-startup-id batteryNag
+exec --no-startup-id nm-applet
 exec_always feh --bg-fill $WALLPAPER_FILE # --bg-center --bg-fill --bg-max --bg-scale --bg-tile
 exec startup-software # update-manager -d, other
 
@@ -206,5 +208,4 @@ workspace 8 output $DISPLAY_RIGHT
 workspace 9 output $DISPLAY_RIGHT
 workspace 10 output $DISPLAY_RIGHT
 
-exec_always setxkbmap -option ctrl:swapcaps
-exec_always setxkbmap pl
+exec_always keys
