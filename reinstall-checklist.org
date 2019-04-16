@@ -1,29 +1,11 @@
-- install:
-  - firefox (newest version)
-    - Security: STRICT
-    - DuckDuckGo Privacy Essential
-    - Cookie Auto Delete
-      - TURN ON AUTO DELETE
-  - compton
-  - alarm-clock-applet
-  - https://justgetflux.com/
-  - codecs (i.a. for Spotify)
-    - apt install vlc vlc-data browser-plugin-vlc
-- git
-  - configure
-- i3
-  - from synaptic
-    - i3lock
-  - use config from git
-  - install compton
-  - install terminator
-    - use config from git
-- emacs
-  - download newest version
-  - install needed libs with synaptic
-  - ./configure
-  - make
-  - install spacemacs
+* Emacs
+
+  + download newest version
+  + install needed libs with synaptic
+  + ./configure
+  + make
+  + https://github.com/syl20bnr/spacemacs
+    + use 'develop' branch
     + install Adobe Source Code Pro font
       - https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font
         - wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
@@ -32,11 +14,13 @@
         - fc-cache -f -v
     + modify ~/.spacemacs
       - use config from git
-- terminal
-  - terminator
+
+* terminal
+
+  + terminator
     - use config from git
     - set Source Code Pro Regular 10
-  - zsh
+  + zsh
     - install zsh (synaptic)
     - chsh -s `which zsh`
       - or add in .bashrc
@@ -46,9 +30,45 @@
     - add bin and other paths ONLY TO .profile
       - if not, dmenu_run will not work (probably because .bashrc and .zshrc are
         only for interactive shells)
-- make bin directory
-  - all symlinks to apps that are not in git/configs/bin
-  - make sure needed command from bin are working with i3 launcher
-    - not sure how to make it. adding to .bashrc will do the job in the end.
-- ssh
-  - generate key https://help.github.com/en/articles/connecting-to-github-with-ssh
+  + make bin directory
+    - all symlinks to apps that are not in git/configs/bin
+    - make sure needed command from bin are working with i3 launcher
+      - not sure how to make it. adding to .bashrc will do the job in the end.
+  + ssh
+    - generate key
+      https://help.github.com/en/articles/connecting-to-github-with-ssh
+
+* install:
+
+  + firefox (newest version)
+    - Security: STRICT
+    - DuckDuckGo Privacy Essential
+    - Cookie Auto Delete
+      - TURN ON AUTO DELETE
+  + alarm-clock-applet
+  + https://justgetflux.com/
+  + codecs (i.a. for Spotify)
+    - apt install vlc vlc-data browser-plugin-vlc
+  + Gnucash
+    - download newest version
+    - check needed libs in README.dependencies (install with synaptic)
+    - cmake-gui .
+      - uncheck optional dependencies
+    - make
+
+* git
+
+  - symlinks to .gitconfig and .gitignore_global from git
+
+* i3
+
+  + from synaptic
+    - i3lock
+  + use config from git
+  + install compton
+  + install terminator
+    - use config from git
+  + i3status config
+    - symlink z git ~/.config/i3status/config
+    - https://i3wm.org/i3status/manpage.html
+
