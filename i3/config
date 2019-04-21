@@ -166,7 +166,7 @@ set $DISPLAY_LEFT HDMI-3
 set $DISPLAY_RIGHT LVDS-1
 set $WALLPAPER_FILE ~/Pictures/wallpapers/hotline.png
 
-# battery monitoring. not tested
+# battery monitoring, works nice! https://github.com/yashsriv/i3-config
 exec --no-startup-id batteryNag
 exec --no-startup-id nm-applet
 exec_always feh --bg-fill $WALLPAPER_FILE # --bg-center --bg-fill --bg-max --bg-scale --bg-tile
