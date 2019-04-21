@@ -9,7 +9,7 @@
 
 SLEEP_TIME=5  # Time between checks
 SAFE_PERCENT=30  # Chill hain
-DANGER_PERCENT=15  # Warn
+DANGER_PERCENT=10  # Warn
 CRITICAL_PERCENT=5  # Hibernate
 
 NAGBAR_PID=0
@@ -17,7 +17,8 @@ export DISPLAY=:0.0
 
 function launchNagbar
 {
-  i3-nagbar -m 'Battery Low!!' &
+  i3-nagbar -m '🔋 Battery Low!' &
+  beeep & # beep scrip using speaker-test
   NAGBAR_PID=$!
 }
 
