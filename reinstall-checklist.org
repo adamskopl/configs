@@ -14,6 +14,10 @@
         - fc-cache -f -v
     + modify ~/.spacemacs
       - use config from git
+  + js setup
+    - npm install -g
+      - import-js
+      - js-beautify
 
 * terminal
 
