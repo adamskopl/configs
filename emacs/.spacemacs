@@ -39,19 +39,57 @@ You should not put any user code in there besides modifying the variable
 values."
   (setq-default
    dotspacemacs-themes '(
-                         monokai
-                         afternoon
-                         ample
-                         naquadah
+                         zen-and-art
                          underwater
-                         deeper-blue
-                         subatomic
-                         subatomic256
-                         tangotango
-                         badwolf
-                         wombat
+                         twilight
+                         twilight-anti-bright
+                         toxi
+                         tango-2
+                         dorsey
+                         graham
+                         junio
                          spolsky
-                         django
+                         subatomic256
+                         soothe
+                         reverse
+                         railscasts
+                         purple-haze
+                         naquadah
+                         monokai
+                         mustang
+                         molokai
+                         madhat2r
+                         lush
+                         kaolin-temple
+                         kaolin-valley-dark
+                         jbeans
+                         jazz
+                         gruvbox-dark-hard
+                         gruvbox
+                         gruber-darker
+                         grandshell
+                         flatland
+                         exotica
+                         doom-Iosvkem
+                         doom-challenger-deep
+                         doom-city-lights
+                         doom-dracula
+                         doom-molokai
+                         doom-one
+                         darktooth
+                         darkokai
+                         cyberpunk
+                         sanityinc-tomorrow-bright
+                         sanityinc-tomorrow-eighties
+                         sanityinc-tomorrow-night
+                         clues
+                         cherry-blossom
+                         busybee
+                         badwolf
+                         ample-zen
+                         alect-black-alt
+                         afternoon
+                         deeper-blue
                          )
    ))
 
