@@ -176,6 +176,7 @@ exec xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RE
 
 exec --no-startup-id compton
 exec alarm-clock-applet
+exec fluxgui
 
 # --- BINDSYM
 bindsym Control+$mod+l exec i3lock -t -i $WALLPAPER_FILE
