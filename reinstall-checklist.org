@@ -50,7 +50,6 @@
     - Cookie Auto Delete
       - TURN ON AUTO DELETE
   + alarm-clock-applet
-  + https://justgetflux.com/
   + codecs (i.a. for Spotify)
     - apt install vlc vlc-data browser-plugin-vlc
   + Gnucash
@@ -59,7 +58,7 @@
     - cmake-gui .
       - uncheck optional dependencies
     - make
-  + fluxgui
+  + fluxgui https://justgetflux.com/
     - sudo add-apt-repository ppa:nathan-renniewaldock/flux
     - sudo apt-get update
     - sudo apt-get install fluxgui
