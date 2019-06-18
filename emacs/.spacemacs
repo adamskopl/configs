@@ -91,6 +91,13 @@ values."
                          afternoon
                          deeper-blue
                          )
+
+   dotspacemacs-default-font '("Source Code Pro"
+                               :size 15
+                               ;; :size 18
+                               :weight normal
+                               :width normal)
+
    ))
 
 (defun dotspacemacs/user-config ()
