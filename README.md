@@ -1,3 +1,5 @@
+My Ubuntu+i3wm reinstall checklist
+
 * Emacs
 
   + download newest version
@@ -78,4 +80,3 @@
   + i3status config
     - symlink z git ~/.config/i3status/config
     - https://i3wm.org/i3status/manpage.html
-
