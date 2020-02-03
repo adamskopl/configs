@@ -26,6 +26,7 @@ My Ubuntu+i3wm reinstall checklist
   + terminator
     - use config from git
     - set Source Code Pro Regular 10
+    - use i3 theme's background color
   + zsh
     - install zsh (synaptic)
     - chsh -s `which zsh`
@@ -74,9 +75,13 @@ My Ubuntu+i3wm reinstall checklist
   + from synaptic
     - i3lock
   + use config from git
-  + install compton
   + install terminator
     - use config from git
   + i3status config
     - symlink z git ~/.config/i3status/config
     - https://i3wm.org/i3status/manpage.html
+  + https://github.com/altdesktop/i3-style
+    - themes choices: ubuntu, archlinux
+    - uset theme's background for:
+      - desktop background (hsetroot)
+      - terminator background
