@@ -155,39 +155,56 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         tray_output primary
+  colors {
+    separator #666666
+    background #333333
+    statusline #bbbbbb
+    focused_workspace #888888 #dddddd #222222 #222222
+    active_workspace #333333 #555555 #bbbbbb #bbbbbb
+    inactive_workspace #333333 #555555 #bbbbbb #bbbbbb
+    urgent_workspace #2f343a #900000 #ffffff #ffffff
+  }
 }
 
 # append to the end of the original config
-
 set $RESOLUTION_LEFT 1920x1080
 set $RESOLUTION_RIGHT 1920x1080
-focus_follows_mouse no
 
 set $DISPLAY_LEFT HDMI-3
-set $DISPLAY_RIGHT VGA-1
+set $DISPLAY_RIGHT HDMI-2
 set $DISPLAY_LAPTOP LVDS-1
-set $WALLPAPER_FILE ~/Pictures/wallpapers/hotline.png
+
+set $BACKGROUND-COLOR "#ededed" ;; adwaita
+
+focus_follows_mouse yes
+
 # battery monitoring, works nice! https://github.com/yashsriv/i3-config
 exec --no-startup-id batteryNag
 exec --no-startup-id nm-applet
-exec_always feh --bg-fill $WALLPAPER_FILE # --bg-center --bg-fill --bg-max --bg-scale --bg-tile
+
+exec_always hsetroot -solid $BACKGROUND-COLOR
 exec startup-software # update-manager -d, other
 
-exec xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RESOLUTION_LEFT --output $DISPLAY_RIGHT --mode $RESOLUTION_RIGHT --output $DISPLAY_LAPTOP --off
+exec_always xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RESOLUTION_LEFT --output $DISPLAY_RIGHT --mode $RESOLUTION_RIGHT --output $DISPLAY_LAPTOP --off
 
-exec --no-startup-id compton
 exec alarm-clock-applet
 exec fluxgui
 
-# --- BINDSYM
-bindsym Control+$mod+l exec i3lock -t -i $WALLPAPER_FILE
+# -------- BINDSYM -----------
+bindsym Control+$mod+l exec i3lock -c $BACKGROUND-COLOR
 bindsym $mod+q sticky toggle
+
+# AMIXER
 bindsym $mod+plus exec amixer sset Master 5%+
+bindsym $mod+F3 exec amixer sset Master 5%+
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+
+
 bindsym $mod+minus exec amixer sset Master 5%-
+bindsym $mod+F2 exec amixer sset Master 5%-
+bindsym XF86AudioLowerVolume exec amixer sset Master 5%-
 
 bindsym $mod+F1 exec amixer -D pulse set Master 1+ toggle
-bindsym $mod+F2 exec amixer sset Master 5%-
-bindsym $mod+F3 exec amixer sset Master 5%+
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 bindsym $mod+backslash exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym $mod+bracketleft exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
@@ -211,3 +228,7 @@ workspace 9 output $DISPLAY_RIGHT
 workspace 10 output $DISPLAY_RIGHT
 
 exec_always keys
+client.focused #888888 #dddddd #222222 #2e9ef4
+client.focused_inactive #333333 #555555 #bbbbbb #484e50
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
