@@ -95,5 +95,45 @@ My Ubuntu+i3wm reinstall checklist
    - hsetroot, i3lock background: "#ededed"
    - terminator 'adwaita' profile from config
    - i3-style 'okraits'
+     #+BEGIN_SRC conf
+bar {
+  colors {
+    separator #666666
+    background #333333
+    statusline #bbbbbb
+    focused_workspace #888888 #dddddd #222222 #222222
+    active_workspace #333333 #555555 #bbbbbb #bbbbbb
+    inactive_workspace #333333 #555555 #bbbbbb #bbbbbb
+    urgent_workspace #2f343a #900000 #ffffff #ffffff
+  }
+}
 
-** 
+client.focused #888888 #dddddd #222222 #2e9ef4
+client.focused_inactive #333333 #555555 #bbbbbb #484e50
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
+     #+END_SRC
+
+** heroku
+
+   - Emacs 'heroku' theme
+   - hsetroot, i3lock background: "#3f464c"
+   - i3-style 'base16-tomorrow'
+     #+BEGIN_SRC conf
+bar {
+  colors {
+    separator #969896
+    background #1d1f21
+    statusline #c5c8c6
+    focused_workspace #81a2be #81a2be #1d1f21 #282828
+    active_workspace #373b41 #373b41 #ffffff #928374
+    inactive_workspace #282a2e #282a2e #969896 #928374
+    urgent_workspace #cc6666 #cc6666 #ffffff #ebdbb2
+  }
+}
+
+client.focused #81a2be #81a2be #1d1f21 #282a2e
+client.focused_inactive #373b41 #373b41 #969896 #282a2e
+client.unfocused #282a2e #282a2e #969896 #282a2e
+client.urgent #373b41 #cc6666 #ffffff #cc6666
+     #+END_SRC
