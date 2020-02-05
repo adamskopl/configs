@@ -174,7 +174,8 @@ set $DISPLAY_LEFT HDMI-3
 set $DISPLAY_RIGHT HDMI-2
 set $DISPLAY_LAPTOP LVDS-1
 
-set $BACKGROUND-COLOR "#ededed" ;; adwaita
+# set $BACKGROUND-COLOR "#ededed" # adwaita
+set $BACKGROUND-COLOR "#3f464c" # heroku
 
 focus_follows_mouse yes
 
