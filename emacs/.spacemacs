@@ -4,13 +4,14 @@ You should not put any user code in this function besides modifying the variable
 values."
   (setq-default
    dotspacemacs-configuration-layers
-   '(
+   '(octave
+     rust
      html
      javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
      auto-completion
@@ -18,6 +19,8 @@ values."
      emacs-lisp
      git
      markdown
+     multiple-cursors
+     treemacs
      org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -39,64 +42,26 @@ You should not put any user code in there besides modifying the variable
 values."
   (setq-default
    dotspacemacs-themes '(
-                         zen-and-art
-                         underwater
-                         twilight
-                         twilight-anti-bright
-                         toxi
-                         tango-2
-                         dorsey
-                         graham
-                         junio
-                         spolsky
-                         subatomic256
-                         soothe
-                         reverse
-                         railscasts
-                         purple-haze
-                         naquadah
-                         monokai
-                         mustang
-                         molokai
-                         madhat2r
-                         lush
-                         kaolin-temple
-                         kaolin-valley-dark
-                         jbeans
-                         jazz
-                         gruvbox-dark-hard
-                         gruvbox
-                         gruber-darker
-                         grandshell
-                         flatland
-                         exotica
-                         doom-Iosvkem
-                         doom-challenger-deep
-                         doom-city-lights
-                         doom-dracula
-                         doom-molokai
-                         doom-one
-                         darktooth
-                         darkokai
-                         cyberpunk
-                         sanityinc-tomorrow-bright
-                         sanityinc-tomorrow-eighties
-                         sanityinc-tomorrow-night
-                         clues
-                         cherry-blossom
-                         busybee
-                         badwolf
-                         ample-zen
-                         alect-black-alt
-                         afternoon
-                         deeper-blue
+                         ;; https://themegallery.robdor.com/
+                         ;; light
+                         adwaita
+                         dichromacy
+                         ;; dark
+                         alect-dark-alt
+                         heroku
+                         subatomic
                          )
 
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 15
+   dotspacemacs-default-font '(
+                               ;; "Source Code Pro"
+                               "Fira Code"
+                               ;; "Ubuntu Mono"
+                               :size 14
                                ;; :size 18
+                               ;; :weight bold
                                :weight normal
-                               :width normal)
+                               :width normal
+                               )
 
    ))
 
@@ -113,8 +78,8 @@ you should place your code here."
   ;; (setenv "PATH" (concat (getenv "PATH") ":PATH1:PATH2"))
 
   ;; LOOK
-  (spacemacs/toggle-transparency)
-  (spacemacs/decrease-transparency)
+  ;; (spacemacs/toggle-transparency)
+  ;; (spacemacs/decrease-transparency)
 
   ;; WEBDEV
   (defun my/use-eslint-from-node-modules ()
@@ -130,6 +95,7 @@ you should place your code here."
   (add-hook 'js2-mode-hook' spacemacs/toggle-line-numbers-on)
   (add-hook 'js2-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
   (add-to-list 'auto-mode-alist '("\\.styl\\'" . less-css-mode))
+  (add-to-list 'auto-mode-alist '("\\.template.js\\'" . html-mode))
 
   ;; ORG MODE
   (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
@@ -150,9 +116,6 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
- '(org-agenda-files
-   (quote
-    ("~/main.org" "~/hobby.org" )))
  '(org-use-tag-inheritance nil)
  '(standard-indent 2))
 
