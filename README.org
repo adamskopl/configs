@@ -1,7 +1,6 @@
 My Ubuntu+i3wm reinstall checklist
 
 * Emacs/Spacemacs
-
 ** install
 
    + download newest version
@@ -21,15 +20,13 @@ My Ubuntu+i3wm reinstall checklist
          - fc-cache -f -v
      + modify ~/.spacemacs
        - use config from git
+
 ** config
 
    + js setup
      - npm install -g
        - import-js
        - js-beautify
-** themes
-
-   - https://themegallery.robdor.com/
 
 * terminal
 
@@ -89,8 +86,14 @@ My Ubuntu+i3wm reinstall checklist
   + i3status config
     - symlink z git ~/.config/i3status/config
     - https://i3wm.org/i3status/manpage.html
-  + https://github.com/altdesktop/i3-style
-    - eventually, use theme's background for consistency in:
-      - Emacs
-      - terminator
-      - desktop background (hsetroot)
+  + style setup with https://github.com/altdesktop/i3-style
+
+* themes
+** adwaita
+
+   - Emacs 'adwaita' theme
+   - hsetroot, i3lock background: "#ededed"
+   - terminator 'adwaita' profile from config
+   - i3-style 'okraits'
+
+** 
