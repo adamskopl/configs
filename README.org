@@ -94,7 +94,7 @@ My Ubuntu+i3wm reinstall checklist
    - Emacs 'adwaita' theme
    - hsetroot, i3lock background: "#ededed"
    - terminator 'adwaita' profile from config
-   - i3-style 'okraits'
+   - i3-style 'okraits' or 'base16-tomorrow'
      #+BEGIN_SRC conf
 bar {
   colors {
@@ -119,6 +119,11 @@ client.urgent #2f343a #900000 #ffffff #900000
    - Emacs 'heroku' theme
    - hsetroot, i3lock background: "#3f464c"
    - i3-style 'base16-tomorrow'
+
+     #+BEGIN_SRC bash
+./i3-style.x86_64 base16-tomorrow  -o ~/.config/i3/config --reload
+     #+END_SRC
+
      #+BEGIN_SRC conf
 bar {
   colors {
