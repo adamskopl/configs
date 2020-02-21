@@ -93,8 +93,14 @@ My Ubuntu+i3wm reinstall checklist
 
    - Emacs 'adwaita' theme
    - hsetroot, i3lock background: "#ededed"
-   - terminator 'adwaita' profile from config
+   - terminator 'adwaita' profile from config (for permanent profile choice
+     Preferences -> Layouts -> Terminal child1)
    - i3-style 'okraits' or 'base16-tomorrow'
+
+     #+BEGIN_SRC bash
+./i3-style.x86_64 okraits -o ~/.config/i3/config --reload
+     #+END_SRC
+
      #+BEGIN_SRC conf
 bar {
   colors {
