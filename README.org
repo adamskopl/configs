@@ -124,6 +124,8 @@ client.urgent #2f343a #900000 #ffffff #900000
 
    - Emacs 'heroku' theme
    - hsetroot, i3lock background: "#3f464c"
+   - terminator 'heroku' profile from config (for permanent profile choice
+     Preferences -> Layouts -> Terminal child1)
    - i3-style 'base16-tomorrow'
 
      #+BEGIN_SRC bash

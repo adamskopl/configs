@@ -156,13 +156,13 @@ bar {
         status_command i3status
         tray_output primary
   colors {
-    separator #666666
-    background #333333
-    statusline #bbbbbb
-    focused_workspace #888888 #dddddd #222222 #222222
-    active_workspace #333333 #555555 #bbbbbb #bbbbbb
-    inactive_workspace #333333 #555555 #bbbbbb #bbbbbb
-    urgent_workspace #2f343a #900000 #ffffff #ffffff
+    separator #969896
+    background #1d1f21
+    statusline #c5c8c6
+    focused_workspace #81a2be #81a2be #1d1f21 #1d1f21
+    active_workspace #373b41 #373b41 #ffffff #ffffff
+    inactive_workspace #282a2e #282a2e #969896 #969896
+    urgent_workspace #cc6666 #cc6666 #ffffff #ffffff
   }
 }
 
@@ -190,6 +190,7 @@ exec_always xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --m
 
 exec alarm-clock-applet
 exec fluxgui
+exec dropbox
 
 # -------- BINDSYM -----------
 bindsym Control+$mod+l exec i3lock -c $BACKGROUND-COLOR
@@ -229,7 +230,7 @@ workspace 9 output $DISPLAY_RIGHT
 workspace 10 output $DISPLAY_RIGHT
 
 exec_always keys
-client.focused #888888 #dddddd #222222 #2e9ef4
-client.focused_inactive #333333 #555555 #bbbbbb #484e50
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+client.focused #81a2be #81a2be #1d1f21 #282a2e
+client.focused_inactive #373b41 #373b41 #969896 #282a2e
+client.unfocused #282a2e #282a2e #969896 #282a2e
+client.urgent #373b41 #cc6666 #ffffff #cc6666
