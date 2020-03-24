@@ -116,6 +116,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
+ '(org-agenda-show-future-repeats (quote next))
  '(org-use-tag-inheritance nil)
  '(standard-indent 2))
 
