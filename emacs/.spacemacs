@@ -99,7 +99,6 @@ you should place your code here."
 
   ;; ORG MODE
   (add-hook 'org-mode-hook' spacemacs/toggle-automatic-symbol-highlight-on)
-  (add-hook 'org-mode-hook' spacemacs/toggle-auto-fill-mode-on)
 
   ;; KEYS
   (global-set-key (kbd "<f5>") 'revert-buffer)
