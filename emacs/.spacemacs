@@ -75,6 +75,8 @@ you should place your code here."
 
   ;; SYSTEM
   ;; if some system paths are not working
+  ;; LIST:
+  ;; - node/bin
   ;; (setenv "PATH" (concat (getenv "PATH") ":PATH1:PATH2"))
 
   ;; LOOK
