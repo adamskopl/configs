@@ -156,26 +156,24 @@ bar {
         status_command i3status
         tray_output primary
   colors {
-    separator #969896
-    background #1d1f21
-    statusline #c5c8c6
-    focused_workspace #81a2be #81a2be #1d1f21 #1d1f21
-    active_workspace #373b41 #373b41 #ffffff #ffffff
-    inactive_workspace #282a2e #282a2e #969896 #969896
-    urgent_workspace #cc6666 #cc6666 #ffffff #ffffff
+    separator #666666
+    background #333333
+    statusline #bbbbbb
+    focused_workspace #888888 #dddddd #222222 #1d1f21
+    active_workspace #333333 #555555 #bbbbbb #ffffff
+    inactive_workspace #333333 #555555 #bbbbbb #969896
+    urgent_workspace #2f343a #900000 #ffffff #ffffff
   }
 }
 
 # append to the end of the original config
-set $RESOLUTION_LEFT 1920x1080
-set $RESOLUTION_RIGHT 1920x1080
+set $RESOLUTION 1920x1080
 
-set $DISPLAY_LEFT HDMI-3
-set $DISPLAY_RIGHT HDMI-2
-set $DISPLAY_LAPTOP LVDS-1
+set $DISPLAY_LEFT HDMI-2
+set $DISPLAY_RIGHT HDMI-3
 
-# set $BACKGROUND-COLOR "#ededed" # adwaita
-set $BACKGROUND-COLOR "#3f464c" # heroku
+set $BACKGROUND-COLOR "#ededed" # adwaita
+# set $BACKGROUND-COLOR "#3f464c" # heroku
 
 focus_follows_mouse yes
 
@@ -185,8 +183,6 @@ exec --no-startup-id nm-applet
 
 exec_always hsetroot -solid $BACKGROUND-COLOR
 exec startup-software # update-manager -d, other
-
-exec_always xrandr --output $DISPLAY_LEFT --primary --left-of $DISPLAY_RIGHT --mode $RESOLUTION_LEFT --output $DISPLAY_RIGHT --mode $RESOLUTION_RIGHT --output $DISPLAY_LAPTOP --off
 
 exec alarm-clock-applet
 exec fluxgui
@@ -230,7 +226,7 @@ workspace 9 output $DISPLAY_RIGHT
 workspace 10 output $DISPLAY_RIGHT
 
 exec_always keys
-client.focused #81a2be #81a2be #1d1f21 #282a2e
-client.focused_inactive #373b41 #373b41 #969896 #282a2e
-client.unfocused #282a2e #282a2e #969896 #282a2e
-client.urgent #373b41 #cc6666 #ffffff #cc6666
+client.focused #888888 #dddddd #222222 #2e9ef4
+client.focused_inactive #333333 #555555 #bbbbbb #484e50
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
