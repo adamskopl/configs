@@ -172,8 +172,10 @@ set $RESOLUTION 1920x1080
 set $DISPLAY_LEFT HDMI-2
 set $DISPLAY_RIGHT HDMI-3
 
-set $BACKGROUND-COLOR "#ededed" # adwaita
-# set $BACKGROUND-COLOR "#3f464c" # heroku
+set $BACKGROUND_IMAGE image.png
+# colors not working with hsetroot and i3lock when using with images. probably something with quotes
+set $BACKGROUND_COLOR "#ededed" # adwaita
+# set $BACKGROUND_COLOR "#3f464c" # heroku
 
 focus_follows_mouse yes
 
@@ -181,7 +183,8 @@ focus_follows_mouse yes
 exec --no-startup-id batteryNag
 exec --no-startup-id nm-applet
 
-exec_always hsetroot -solid $BACKGROUND-COLOR
+exec_always hsetroot -solid "#ededed" -center $BACKGROUND_IMAGE
+
 exec startup-software # update-manager -d, other
 
 exec alarm-clock-applet
@@ -189,7 +192,7 @@ exec fluxgui
 exec dropbox
 
 # -------- BINDSYM -----------
-bindsym Control+$mod+l exec i3lock -c $BACKGROUND-COLOR
+bindsym Control+$mod+l exec i3lock -f -c "#ededed" -i $BACKGROUND_IMAGE
 bindsym $mod+q sticky toggle
 
 # AMIXER
