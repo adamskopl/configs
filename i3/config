@@ -183,7 +183,7 @@ focus_follows_mouse yes
 exec --no-startup-id batteryNag
 exec --no-startup-id nm-applet
 
-exec_always hsetroot -solid "#ededed" -center $BACKGROUND_IMAGE
+exec_always hdmi.sh && hsetroot -solid "#ededed" -center $BACKGROUND_IMAGE
 
 exec startup-software # update-manager -d, other
 
