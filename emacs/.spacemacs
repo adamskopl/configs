@@ -4,23 +4,19 @@ You should not put any user code in this function besides modifying the variable
 values."
   (setq-default
    dotspacemacs-configuration-layers
-   '(octave
-     rust
-     html
-     javascript
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
      auto-completion
      better-defaults
      emacs-lisp
      git
+     helm
      markdown
      multiple-cursors
-     treemacs
      org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -28,8 +24,13 @@ values."
      spell-checking
      syntax-checking
      version-control
+     treemacs
      themes-megapack
      colors
+     octave
+     rust
+     html
+     javascript
      )
    )
   )
@@ -79,6 +80,9 @@ you should place your code here."
   ;; - node/bin
   ;; (setenv "PATH" (concat (getenv "PATH") ":PATH1:PATH2"))
 
+  ;; SOME GLOBAL
+  (global-visual-line-mode t)
+
   ;; LOOK
   ;; (spacemacs/toggle-transparency)
   ;; (spacemacs/decrease-transparency)
@@ -119,7 +123,8 @@ you should place your code here."
  '(js2-basic-offset 2)
  '(org-agenda-show-future-repeats (quote next))
  '(org-use-tag-inheritance nil)
- '(standard-indent 2))
+ '(standard-indent 2)
+ )
 
 (custom-set-faces
  ;; so the themes' backgrounds work
