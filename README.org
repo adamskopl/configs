@@ -98,7 +98,7 @@ My Ubuntu+i3wm reinstall checklist
    - i3-style 'okraits' or 'base16-tomorrow'
 
      #+BEGIN_SRC bash
-./i3-style.x86_64 okraits -o ~/.config/i3/config --reload
+i3-style.x86_64 okraits -o ~/.config/i3/config --reload
      #+END_SRC
 
      #+BEGIN_SRC conf
@@ -129,7 +129,7 @@ client.urgent #2f343a #900000 #ffffff #900000
    - i3-style 'base16-tomorrow'
 
      #+BEGIN_SRC bash
-./i3-style.x86_64 base16-tomorrow  -o ~/.config/i3/config --reload
+i3-style.x86_64 base16-tomorrow  -o ~/.config/i3/config --reload
      #+END_SRC
 
      #+BEGIN_SRC conf
