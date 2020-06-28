@@ -187,6 +187,7 @@ exec_always hdmi.sh && hsetroot -solid "#ededed" -center $BACKGROUND_IMAGE
 
 exec startup-software # update-manager -d, other
 
+exec --no-startup-id compton
 exec alarm-clock-applet
 exec fluxgui
 exec dropbox
