@@ -1,12 +1,16 @@
 [user]
-	name = Adam Skobodziński
-	email = adam@skobo.pl
+  name = Adam Skobodziński
+  email = adam@skobo.pl
 
 [alias]
   diff-branches= log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   log-status= log --name-status --oneline
   diff-word = diff --word-diff=color
   show-word = show --word-diff=color
+
 [core]
-	editor = emacs -nw -q
-	excludesfile = ~/.gitignore_global
+  editor = emacs -nw -q
+  excludesfile = ~/.gitignore_global
+
+[diff]
+	tool = meld

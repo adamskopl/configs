@@ -1,5 +1,29 @@
 [global_config]
 [keybindings]
+[profiles]
+  [[default]]
+    background_color = "#ededed"
+    background_darkness = 0.94
+    cursor_color = "#aaaaaa"
+    foreground_color = "#2e3436"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
+  [[adwaita]]
+    background_color = "#ededed"
+    background_darkness = 0.81
+    cursor_color = "#aaaaaa"
+    foreground_color = "#2e3436"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
+  [[heroku]]
+    background_color = "#3f464c"
+    background_darkness = 0.47
+    cursor_color = "#aaaaaa"
+    foreground_color = "#eeeeec"
+    show_titlebar = False
+    scrollbar_position = hidden
 [layouts]
   [[default]]
     [[[child1]]]
@@ -10,29 +34,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#ededed"
-    background_darkness = 0.8
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    foreground_color = "#2e3436"
-    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
-    scrollbar_position = hidden
-    show_titlebar = False
-  [[adwaita]]
-    background_color = "#ededed"
-    background_darkness = 0.95
-    cursor_color = "#aaaaaa"
-    foreground_color = "#2e3436"
-    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
-    scrollbar_position = hidden
-    show_titlebar = False
-  [[heroku]]
-    background_color = "#3f464c"
-    background_darkness = 0.85
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    foreground_color = "#eeeeec"
-    scrollbar_position = hidden
-    show_titlebar = False
